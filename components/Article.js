@@ -86,6 +86,15 @@ const data = [
     thirdParagraph: `Hodor hodor - hodor... Hodor hodor hodor hodor. Hodor. Hodor! Hodor hodor, hodor hodor hodor hodor hodor; hodor hodor? Hodor!
           Hodor hodor, HODOR hodor, hodor hodor?! Hodor! Hodor hodor, HODOR hodor, hodor hodor, hodor, hodor hodor. Hodor, hodor.
           Hodor. Hodor, hodor, hodor. Hodor hodor... Hodor hodor hodor?! Hodor, hodor... Hodor hodor HODOR hodor, hodor hodor. Hodor.`
+  },
+  {
+    title: 'HERRRRRRRRRRRRRROOOOOO',
+    date: 'HEHEHE',
+    firstParagraph: `BIGBIGBIGBIGBIG`,
+
+    secondParagraph: `THIS IS PRETTY NEAT`,
+
+    thirdParagraph: `sorry for yelling with my caps lock before i will be done now :( my apologies)`
   }
 ];
 
