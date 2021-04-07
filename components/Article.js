@@ -138,7 +138,6 @@ function articleMaker( articleObj ){
 
     spanOne.addEventListener("click", function(event){
       div.classList.toggle("article-open");
-      console.log(div.classList);
     })
 
     div.appendChild(h2);
@@ -148,7 +147,6 @@ function articleMaker( articleObj ){
     div.appendChild(p3);
     div.appendChild(spanOne);
 
-    console.log(div);
     return div;
 }
 
