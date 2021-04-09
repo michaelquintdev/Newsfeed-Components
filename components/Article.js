@@ -86,6 +86,15 @@ const data = [
     thirdParagraph: `Hodor hodor - hodor... Hodor hodor hodor hodor. Hodor. Hodor! Hodor hodor, hodor hodor hodor hodor hodor; hodor hodor? Hodor!
           Hodor hodor, HODOR hodor, hodor hodor?! Hodor! Hodor hodor, HODOR hodor, hodor hodor, hodor, hodor hodor. Hodor, hodor.
           Hodor. Hodor, hodor, hodor. Hodor hodor... Hodor hodor hodor?! Hodor, hodor... Hodor hodor HODOR hodor, hodor hodor. Hodor.`
+  },
+  {
+    title: 'HERRRRRRRRRRRRRROOOOOO',
+    date: 'HEHEHE',
+    firstParagraph: `BIGBIGBIGBIGBIG`,
+
+    secondParagraph: `THIS IS PRETTY NEAT`,
+
+    thirdParagraph: `sorry for yelling with my caps lock before i will be done now :( my apologies)`
   }
 ];
 
@@ -102,7 +111,7 @@ const data = [
 
     <span class="expandButton">+</span>
   </div>
-
+hehhe
   Step 2: Still inside `articleMaker`, add an event listener to the span.expandButton.
   This listener should toggle the class 'article-open' on div.article.
 
@@ -114,3 +123,44 @@ const data = [
   Step 5: Try adding new article object to the data array. Make sure it is in the same format as the others.
   Refresh the page to see the new article.
 */
+const articleDiv = document.querySelector(".articles")
+
+function articleMaker( articleObj ){
+    const div = document.createElement("div");
+    const h2 = document.createElement("h2");
+    const articleDate = document.createElement("p");
+    const p1 = document.createElement("p");
+    const p2 = document.createElement("p");
+    const p3 = document.createElement("p");
+    const spanOne = document.createElement("span");
+
+    div.classList.add("article");
+    articleDate.classList.add("date");
+    spanOne.classList.add("expandButton");
+
+    articleDate.textContent = articleObj.date;
+    h2.textContent = articleObj.title;
+    p1.textContent = articleObj.firstParagraph;
+    p2.textContent = articleObj.secondParagraph;
+    p3.textContent =  articleObj.thirdParagraph;
+    spanOne.textContent = '+';
+
+    spanOne.addEventListener("click", function(event){
+      div.classList.toggle("article-open");
+    })
+
+    div.appendChild(h2);
+    div.appendChild(articleDate);
+    div.appendChild(p1);
+    div.appendChild(p2);
+    div.appendChild(p3);
+    div.appendChild(spanOne);
+
+    return div;
+}
+
+data.forEach((obj) => {
+  const newArticle = articleMaker(obj);
+  return articleDiv.appendChild(newArticle);
+  // return newArticle;
+})
